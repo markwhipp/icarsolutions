@@ -27,12 +27,12 @@ header {
   padding: 10px;
   font-size: 2em;
   color: white;
-  background-color: #58595b;
+  background-color: #006bb2;
 }
 
 .logo {
   height: 50px;
-  margin-right: 20px;
+  margin-right: 0px;
 }
 .heading{
 	letter-spacing: -0.05em;
