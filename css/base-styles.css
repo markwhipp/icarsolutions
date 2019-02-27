@@ -1,3 +1,6 @@
+/* BASE STYLES -----------------------------*/
+
+
 *,
 *:before,
 *:after {
@@ -7,7 +10,35 @@ body {
   font-family: "Roboto","Helvetica Neue","Helvetica",Sans-Serif;
 }
 
-.wrapper {
+h1, h2, h3, h4 {
+  font-family: "Crete Round","Helvetica Neue","Helvetica",Sans-Serif;
+}
+
+body, main, header {
+   background-color: white;
+   color: black;
+}
+
+a {
+  text-decoration: underline;
+  color: black;    
+}
+
+a:hover {
+  text-decoration: none;
+  color: black;   
+}
+
+
+
+
+/* END BASE STYES -----------------------------*/
+
+
+/* LAYOUT STYLES -------------------------------*/
+
+
+.l-wrapper {
 margin: 0 auto;  
 }
 
@@ -30,13 +61,26 @@ header {
   background-color: #006bb2;
 }
 
-.logo {
-  height: 50px;
-  margin-right: 0px;
+.l-icon {
+  flex: 0 0 50px;
 }
+
+
+.l-text-logo{
+    flex: 0 1 300px;
+}
+
+
+
+
+
+
+
 .heading{
 	letter-spacing: -0.05em;
 }
+
+/* END LAYOUT STYLES -----------------------------*/
 
 /* Navigation styles -----------------------------*/
 
@@ -66,7 +110,12 @@ nav ul li a:hover {
   color: #E05d19;
   text-decoration: none;
 }
-@media screen and (max-width: 560px) {
+@media screen and (max-width: 700px) {
+    
+    .l-text-logo{
+    display:none;
+}
+    
   .nav-container {
     position: fixed;
     top: 0;
