@@ -110,7 +110,7 @@ nav ul li a:hover {
   color: #E05d19;
   text-decoration: none;
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 560px) {
     
     .l-text-logo{
     display:none;
