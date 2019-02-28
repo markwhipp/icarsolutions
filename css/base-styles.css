@@ -320,7 +320,7 @@ nav ul li a:hover {
     display: block;
     width: 20px;
     height: 2px;
-    background: #1f2227;
+    background: #f4941a; !important 
     border-radius: 2px;
     margin-left: 14px;
   }
@@ -498,6 +498,12 @@ section article a:hover {
   height: 375px;
   width: 100%;
   object-fit: cover;
+}
+
+.article-img2 {
+  height: 350px;
+  width: 100%;
+  object-fit: none;
 }
 
 .article-img-flex {
