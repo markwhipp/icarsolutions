@@ -6,6 +6,12 @@
 *:after {
   box-sizing: border-box;
 }
+
+html {
+    -webkit-text-size-adjust: 100%;  /* Stop Safari on iPhone text scaling */
+}
+
+
 body {
   font-family: "Roboto","Helvetica Neue","Helvetica",Sans-Serif;
 }
@@ -44,7 +50,7 @@ margin: 0 auto;
 
 
 
-header {
+.page-header {
   vertical-align: middle;
   background-color: #006bb2;
   color: white;
@@ -68,9 +74,8 @@ header {
 
 /* Footer ----------------------------------------------*/
 
-footer{
+.page-footer{
 	
-	margin-top: 4em;
     color: white;
 	background-color: #006bb2;
     font-size: 0.8em;
@@ -367,9 +372,13 @@ margin: 0 auto;
 }
 
 
+.page-intro{
+    padding-bottom: 20px;
+}
+
 /* Re-usable Responsive Items-----*/
 
-.lg-row {
+.lg-flex-row {
 	display: -webkit-flex;	
     display: -ms-flexbox;	
 	display: flex;
@@ -387,13 +396,38 @@ margin: 0 auto;
 	align-items: flex-start;
 }
 
-.lg-article {
+.lg-flex-item {
 	-webkit-flex: 1 1 400px;
     -ms-flex: 1 1 400px; 
 	flex: 1 1 400px;
 }
 
 
+.sm-flex-row{
+    display: -webkit-flex;	
+    display: -ms-flexbox;	
+	display: flex;
+	
+    -webkit-flex-flow: row wrap;
+	-ms-flex-flow: row wrap;
+	flex-flow: row wrap;
+		
+	-webkit-justify-content: center;
+	-ms-flex-pack:center;
+	justify-content: center;
+	
+	-webkit-align-items: flex-start;
+	-ms-flex-align: start;
+	align-items: flex-start;
+    padding-top: 20px;
+    
+}
+
+.sm-flex-item{
+    -webkit-flex: 1 0 100px;
+    -ms-flex: 1 0 100px;
+    flex: 1 0 100px;
+}
 
 
 /* Grid styles -------------------------------------------------*/
@@ -430,7 +464,7 @@ margin: 0 auto;
 }
 
 .article-img2 {
-  height: 350px;
+  height: 320px;
   width: 100%;
   object-fit: none;
 }
@@ -451,10 +485,10 @@ margin: 0 auto;
 
 .leading-text {
   max-width: 1180px;
-  padding-top: 3px;
+  margin-top:  2em;
   padding-left: 20px;
   padding-right: 3em;
-  padding-bottom: 2em;
+  
   line-height: 1.4em;
 }
 
@@ -470,6 +504,9 @@ margin: 0 auto;
 .sm-text{
    font-size: 0.9em;
 }
+
+
+/* Re-usable Article Styles-----*/
 
 
 article {
@@ -552,6 +589,21 @@ section article a:hover {
    text-decoration: none;
 }
 
+
+.full-article-text{
+    max-width: 75ch;
+    margin: 20px 20px 0px 20px;
+}
+
+.full-article-text p:first-child{
+    padding-top:0px;
+}
+
+@media screen and (min-width: 950px){
+
+    .full-article-text{
+    margin: 20px 8em 0px 12em;
+}
 
 
 
