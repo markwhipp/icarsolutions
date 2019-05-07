@@ -21,7 +21,7 @@ h1, h2, h3, h4 {
 }
 
 body, main, header {
-   background-color: white;
+   background-color: #006bb2;
    color: black;
 }
 
@@ -376,6 +376,23 @@ margin: 0 auto;
     padding-bottom: 20px;
 }
 
+.cards-background{
+    background-color: #006bb2;
+    background-image: url(../img/icon-wallpaper-01.png);
+}
+
+.chevron-background{
+    Height: 50px;
+    background-image: url(../img/shevron3.png);
+}
+
+.cards-background2{
+    width: 100%;
+    min-height: 400px;
+    background-color: #006bb2;
+    background-image: url(../img/icon-wallpaper-01.png);
+}
+
 /* Re-usable Responsive Items-----*/
 
 .lg-flex-row {
@@ -396,15 +413,8 @@ margin: 0 auto;
 	align-items: flex-start;
 }
 
-.lg-flex-item {
-	-webkit-flex: 1 1 400px;
-    -ms-flex: 1 1 400px; 
-	flex: 1 1 400px;
-}
-
-
-.sm-flex-row{
-    display: -webkit-flex;	
+.flex-row-wrap {
+	display: -webkit-flex;	
     display: -ms-flexbox;	
 	display: flex;
 	
@@ -419,14 +429,26 @@ margin: 0 auto;
 	-webkit-align-items: flex-start;
 	-ms-flex-align: start;
 	align-items: flex-start;
-    padding-top: 20px;
     
+    padding-top: 2em;
 }
+
+.lg-flex-item {
+	-webkit-flex: 1 1 400px;
+    -ms-flex: 1 1 400px; 
+	flex: 1 1 400px;
+}
+
 
 .sm-flex-item{
     -webkit-flex: 1 0 100px;
     -ms-flex: 1 0 100px;
     flex: 1 0 100px;
+}
+
+.cards-svg{
+    flex-grow: 0;
+    border: 1px white;
 }
 
 
@@ -482,6 +504,10 @@ margin: 0 auto;
   padding-right: 3em;
   font-size: 1.6em;
 } 
+
+.text-orange{
+    color: #f4941a;
+}
 
 .leading-text {
   max-width: 1180px;
@@ -599,11 +625,35 @@ section article a:hover {
     padding-top:0px;
 }
 
+.full-article-sub-header{
+    color: #f4941a;
+    font-size: 1.4em;
+    padding-bottom: 20px;
+}
+
+.full-article-ul{
+    list-style-type: disc;
+}
+
+.full-article-li{
+    line-height: 1.4em; 
+    padding-left: 50px;
+    padding-bottom: 20px;
+    list-style-position: inside;
+    max-width: 65ch;
+}
+
+ .text-white{
+        color: white;
+    }
+
 @media screen and (min-width: 950px){
 
     .full-article-text{
     margin: 20px 8em 0px 12em;
 }
+    
+   
 
 
 
