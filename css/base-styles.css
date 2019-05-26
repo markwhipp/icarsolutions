@@ -647,6 +647,46 @@ section article a:hover {
         color: white;
     }
 
+.image-grid{
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-auto-rows: 200px;
+    grid-auto-flow: dense;
+}
+
+.image-grid-horizontal{
+    grid-column: span 2;
+}
+
+.image-grid-vertical{
+    grid-row: span 2;
+}
+
+.image-grid-big{
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.image-grid > div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+}
+
+
+
+.image-grid > div > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+
+
 @media screen and (min-width: 950px){
 
     .full-article-text{
@@ -659,13 +699,10 @@ section article a:hover {
 
 /* image styles -------------------------------------------------*/
 
+    
 
 
-/* Flex styles -------------------------------------------------*/
-
-
-
-
+/* Grid styles -------------------------------------------------*/
 
 
 
