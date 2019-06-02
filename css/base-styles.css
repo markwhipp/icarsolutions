@@ -452,20 +452,106 @@ margin: 0 auto;
 }
 
 
-/* Grid styles -------------------------------------------------*/
+/* Re-usable Grid Option -------------------------------------------------*/
 
 
 
-.cards {
-  display: -ms-grid;
-  display: grid;
-  grid-gap: 5px;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  max-width: 1180px;
-  margin: 0 auto 30px;
+/* Cards 320px -----------*/
+
+/* Flexbox Fallback for IE 10 it works but only if grid option switched off */
+.cards{
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  justify-content: center;
+  max-width: 980px;
 }
 
+.card-subject{
+  flex: 1 1 300px;	
+} 
 
+/* feature query for grid*/
+ 
+@supports (display:grid){
+.cards {
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  margin: 0 auto 30px;
+} 
+}
+
+/* end_Cards 320px ----------*/
+
+/* 6 image grid -----------*/
+
+/* Flexbox Fallback */
+.grid-6image{
+    display: flex;
+  flex-flow: row wrap;
+    
+}
+
+.grid-6image__item{
+    width: 100vw;
+    margin: 0 0 1.5vw 0;
+}
+
+@media screen and (min-width: 600px){
+    .grid-6image__item{
+    width: 45vw;
+    margin: 1.5vw;
+    }
+}
+
+@media screen and (min-width: 900px){
+    .grid-6image__item{
+    width: 30vw;
+    margin: 1.5vw;
+    }
+}
+
+/* feature query for grid*/
+
+@supports(display:grid){
+    
+    .grid-6image{
+    display: grid;
+   grid-template-columns: 1fr;
+    grid-gap: 0.5rem;
+    } 
+    
+    
+    @media (min-width: 600px){
+        
+        .grid-6image{ 
+      grid-template-columns: repeat(2,1fr);
+      margin: 0.5rem;
+            } 
+        
+    }
+    
+    @media (min-width: 900px){
+        
+        .grid-6image{ 
+      grid-template-columns: repeat(3,1fr);
+      margin: 0.5rem;
+            } 
+        
+    }
+   
+  .grid-6image__item{
+    width: auto;
+    margin: 0;
+}  
+   
+}
+    
+  
+            
+
+/* end_6 image grid -----------*/
 
 .cards2 {
   display: -ms-grid;	
@@ -475,6 +561,9 @@ margin: 0 auto;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   margin: 0 auto 30px;	
 }
+
+
+
 
 /* Re-usable Responsive Image Items-----*/
 
@@ -492,8 +581,8 @@ margin: 0 auto;
 }
 
 .article-img-flex {
-  height: auto;
-  width: 100%;
+    width: 100%;
+    height: auto;
 }
 
 /* Re-usable Text Styles-----*/
@@ -613,6 +702,12 @@ section article a:hover {
 
 .article-list li a:hover{
    text-decoration: none;
+}
+
+
+.full-article{
+    max-width:1200px;
+    margin: 0 auto;
 }
 
 
